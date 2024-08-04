@@ -65,8 +65,7 @@ pip install pandas scikit-learn numpy
 1. **Clone the Repository**
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/NuwanSubasingha99/Heart-Disease-prediction.git
    ```
 
 2. **Install Dependencies**
