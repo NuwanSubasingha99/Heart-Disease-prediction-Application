@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Heart Disease Prediction</h1>
+        <form id="predictionForm">
+            <!-- Age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required><br>
+
+            <!-- Gender -->
+            <label for="sex">Gender:</label><br>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="sex" value="1" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="sex" value="0" required>
+
+            <!-- Chest Pain Type -->
+            <label for="cp">Chest Pain Type:</label><br>
+            <label for="low">Low</label>
+            <input type="radio" id="low" name="cp" value="1" required>
+            <label for="medium">Medium</label>
+            <input type="radio" id="medium" name="cp" value="2" required>
+            <label for="high">High</label>
+            <input type="radio" id="high" name="cp" value="3" required>
+            <label for="too-high">Too High</label>
+            <input type="radio" id="too-high" name="cp" value="4" required>
+            
+
+            <!-- Resting Blood Pressure -->
+            <label for="trestbps">Resting Blood Pressure (mm Hg):</label>
+            <input type="number" id="trestbps" name="trestbps" min="70" max="200" required><br>
+
+            <!-- Cholesterol -->
+            <label for="chol">Cholesterol (mg/dl):</label>
+            <input type="number" id="chol" name="chol" min="100" max="600" required><br>
+
+            <!-- Fasting Blood Sugar -->
+            <label for="fbs">Fasting Blood Sugar > 120 mg/dl:</label><br>
+            <label for="fbs-true">True</label>
+            <input type="radio" id="fbs-true" name="fbs" value="1" required>
+            <label for="fbs-false">False</label>
+            <input type="radio" id="fbs-false" name="fbs" value="0" required>
+            
+
+            <!-- Resting ECG -->
+            <label for="restecg">Resting ECG Results:</label><br>
+            <label for="normal">Normal</label>
+            <input type="radio" id="normal" name="restecg" value="0" required>
+            <label for="abnormal">Having ST-T wave abnormality</label>
+            <input type="radio" id="abnormal" name="restecg" value="1" required>
+            <label for="hypertrophy">Showing probable or definite left ventricular hypertrophy</label>
+            <input type="radio" id="hypertrophy" name="restecg" value="2" required>
+            
+
+            <!-- Max Heart Rate -->
+            <label for="thalach">Max Heart Rate Achieved:</label>
+            <input type="number" id="thalach" name="thalach" min="60" max="220" required><br>
+
+            <!-- Exercise Induced Angina -->
+            <label for="exang">Exercise Induced Angina:</label><br>
+            <label for="exang-yes">Yes</label>
+            <input type="radio" id="exang-yes" name="exang" value="1" required>
+            <label for="exang-no">No</label>
+            <input type="radio" id="exang-no" name="exang" value="0" required>
+            
+
+            <!-- Oldpeak -->
+            <label for="oldpeak">Oldpeak (ST depression induced by exercise relative to rest):</label>
+            <input type="number" id="oldpeak" name="oldpeak" step="0.1" min="0" max="10" required><br>
+
+            <!-- Slope -->
+            <label for="slope">Slope of the Peak Exercise ST Segment:</label><br>
+            <select id="slope" name="slope" required>
+                <option value="1">Upsloping</option>
+                <option value="2">Flat</option>
+                <option value="3">Downsloping</option>
+            </select><br>
+
+            <!-- Number of Major Vessels -->
+            <label for="ca">Number of Major Vessels (0-3) Colored by Fluoroscopy:</label><br>
+            <select id="ca" name="ca" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br>
+
+            <!-- Thal -->
+            <label for="thal">Thal:</label><br>
+            <select id="thal" name="thal" required>
+                <option value="1">Normal</option>
+                <option value="2">Fixed Defect</option>
+                <option value="3">Reversible Defect</option>
+            </select><br>
+
+            <input type="submit" value="Predict">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
