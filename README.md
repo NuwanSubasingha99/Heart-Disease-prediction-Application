@@ -1,8 +1,8 @@
-## Heart Disease Prediction Model
+## Heart Disease Prediction Model , Server And UI
 
 ### Overview
 
-This project aims to build a machine learning model to predict heart disease using a dataset containing various medical attributes. The project involves data preprocessing, model training, hyperparameter tuning, and saving the final model using Python libraries such as `scikit-learn` and `pickle`.
+This project aims to build a machine learning model to predict heart disease using a dataset containing various medical attributes. create a flask server and UI for manage user request and predict the results. The project involves data preprocessing, model training, hyperparameter tuning, saving the final model using Python libraries such as `scikit-learn` and `pickle` create flask server, create and Ui .
 
 ### Dataset
 
@@ -97,6 +97,11 @@ The model built in this project achieves a certain level of accuracy (depending 
 This project provides a comprehensive workflow for building, tuning, and deploying a machine learning model for heart disease prediction. It demonstrates the importance of data preprocessing, model selection, and hyperparameter tuning in achieving good predictive performance.
 
 ### License
+
+### User Interface
+
+![Screenshot 2024-08-06 160527](https://github.com/user-attachments/assets/0f7b16d2-873f-4070-bd79-502edfa467a7)
+
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
